@@ -1,0 +1,19 @@
+//Function to check for circular linked list
+
+bool has_cycle(Node* head)
+{
+        Node* fhead=head;
+        Node* shead=head;
+    while(fhead && shead )
+        {
+        fhead=fhead->next->next;
+        shead=shead->next;
+        if(fhead==shead)
+        {
+         return 1;
+            
+        }
+    }
+    
+    return 0;
+}

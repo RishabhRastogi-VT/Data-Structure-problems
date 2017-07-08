@@ -1,0 +1,30 @@
+// pushing a node into linked list
+
+#include<iostream>
+using namespace std;
+struct node
+{
+int data;
+node* next;
+};
+
+node* push(node* head,int data)
+
+{
+node* newnode=new node;
+newnode->data=data;
+newnode->next=head;
+head=newnode;
+return head;
+}
+
+
+int main()
+{
+node* head=NULL;
+head=push(head,5);
+cout<<head->data<<endl;
+head=push(head,78);
+cout<<head->data;
+return 0;
+}
